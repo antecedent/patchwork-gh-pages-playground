@@ -23,6 +23,10 @@
     -->
     <exclude-pattern>*/tests/includes/*</exclude-pattern>
 
+    <!-- Scripts for GitHub Pages use PHP 8.5 and would need their own ruleset. -->
+    <exclude-pattern>*/.github/gh-pages/*</exclude-pattern>
+
+
     <!-- Only check PHP files.
          Note: at this time PHPCS can not scan .phpt files.
          There is a feature request open to change this.
