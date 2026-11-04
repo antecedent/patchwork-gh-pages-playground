@@ -12,7 +12,7 @@ on:
   # And on PRs which update either this workflow or one of the associated files (for a dry-run).
   pull_request:
     paths:
-      - '.github/workflows/update-docs.yml'
+      - '.github/workflows/update-website.yml'
       - '.github/gh-pages/**'
       - 'docs/**'
   # Also allow manually triggering the workflow. This will update the website (not do a dry-run)!
@@ -110,7 +110,7 @@ jobs:
       - name: Upload GH Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: ./docs/_site
+          path: ./docs
 
   deploy:
     permissions:
